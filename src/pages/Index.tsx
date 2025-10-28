@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Hero } from "@/components/Hero";
 import { FilterBar } from "@/components/FilterBar";
-import { ProjectCard, Project } from "@/components/ProjectCard";
+import { Project } from "@/components/ProjectCard";
+import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { CTASection } from "@/components/CTASection";
 
 import coffeeBefore from "@/assets/coffee-before.jpg";
@@ -91,13 +92,9 @@ const Index = () => {
             onFilterChange={setActiveFilter}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
-            {filteredProjects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
-
-          {filteredProjects.length === 0 && (
+          {filteredProjects.length > 0 ? (
+            <ProjectCarousel projects={filteredProjects} />
+          ) : (
             <div className="text-center py-12">
               <p className="text-xl text-muted-foreground">
                 No projects found in this category
