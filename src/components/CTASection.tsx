@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export const CTASection = () => {
   return (
-    <section className="py-24">
+    <section>
       <div className="container mx-auto px-4">
         <div className="card-glow rounded-3xl p-12 md:p-16 text-center space-y-6 glow-emerald">
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground">

@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --popover: 210 25% 7%;
     --popover-foreground: 210 15% 95%;
 
-    --primary: 160 70% 45%;
+    --primary: 247 91% 59%;
     --primary-foreground: 210 15% 95%;
 
     --secondary: 45 85% 55%;
@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 210 20% 12%;
     --muted-foreground: 210 10% 60%;
 
-    --accent: 160 70% 45%;
+    --accent: 247 91% 59%;
     --accent-foreground: 210 15% 95%;
 
     --destructive: 0 70% 50%;
@@ -34,17 +34,17 @@ All colors MUST be HSL.
 
     --border: 210 20% 15%;
     --input: 210 20% 12%;
-    --ring: 160 70% 45%;
+    --ring: 247 91% 59%;
 
     --radius: 1rem;
 
     /* Custom lighting tokens */
-    --glow-emerald: 160 70% 45%;
+    --glow-primary: 247 91% 59%;
     --glow-amber: 45 85% 55%;
-    --hero-glow: 160 70% 35%;
+    --hero-glow: 0 0% 100%;
     
     /* Shadows with glow */
-    --shadow-emerald: 0 8px 32px hsl(var(--glow-emerald) / 0.25);
+    --shadow-primary: 0 8px 32px hsl(var(--glow-primary) / 0.25);
     --shadow-amber: 0 8px 32px hsl(var(--glow-amber) / 0.2);
     --shadow-card: 0 4px 24px hsl(210 20% 3% / 0.5);
   }
@@ -60,13 +60,13 @@ All colors MUST be HSL.
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
   }
 }
 
 @layer utilities {
   .glow-emerald {
-    box-shadow: var(--shadow-emerald);
+    box-shadow: var(--shadow-primary);
   }
   
   .glow-amber {
@@ -78,7 +78,7 @@ All colors MUST be HSL.
   }
   
   .glow-emerald-hover:hover {
-    box-shadow: 0 12px 48px hsl(var(--glow-emerald) / 0.4);
+    box-shadow: 0 12px 48px hsl(var(--glow-primary) / 0.4);
   }
 
   .hero-glow {

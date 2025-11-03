@@ -12,6 +12,7 @@ export const ProjectCarousel = ({ projects }: ProjectCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
     slidesToScroll: 1,
+    watchDrag: false,
     breakpoints: {
       "(min-width: 768px)": { 
         align: "start",
